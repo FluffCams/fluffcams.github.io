@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FluffCams tech specs: how the live video works</title>
+<meta name="description" content="How FluffCams streams live video with WebRTC, how OBS works with it, and what a self-hosted FluffCams site needs.">
+<link rel="canonical" href="https://fluffcams.github.io/tech-specs.html">
+<link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FluffCams documentation">
+<meta property="og:title" content="FluffCams tech specs: how the live video works">
+<meta property="og:description" content="How FluffCams streams live video with WebRTC, how OBS works with it, and what a self-hosted FluffCams site needs.">
+<meta property="og:url" content="https://fluffcams.github.io/tech-specs.html">
+<meta property="og:image" content="https://fluffcams.github.io/img/share.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"FluffCams tech specs: how the live video works","description":"How FluffCams streams live video with WebRTC, how OBS works with it, and what a self-hosted FluffCams site needs.","url":"https://fluffcams.github.io/tech-specs.html","publisher":{"@type":"Organization","name":"FluffCams","url":"https://fluffcams.com/"}}</script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/"><img src="/img/logo.svg" alt="" width="25" height="30"><span>Fluff<b>Cams</b></span><small>docs</small></a><a class="cta" href="https://fluffcams.com/">fluffcams.com</a></div></header>
+<div class="wrap"><nav class="nav" aria-label="Guides"><a href="/">Overview</a><a href="/admin-manual.html">Admin manual</a><a href="/model-guide.html">Model guide</a><a href="/member-guide.html">Member guide</a><a href="/studio-guide.html">Studio guide</a><a href="/features.html">Features</a><a href="/tech-specs.html" aria-current="page">Tech specs</a></nav></div>
+<main class="wrap">
+<h1>Tech specs</h1>
+<p class="lead">How the live video works, and what you need if you run FluffCams on your own servers instead of our hosting.</p>
+<h2>How the live video works</h2>
+<p>FluffCams streams real-time WebRTC video through a media server. A model sends one stream and the server forwards it to every viewer, so the model&#x27;s upload does not grow with the audience. Each viewer gets the best quality their connection can take.</p>
+<p>Private, group and ticket shows run in their own rooms, so only the people who paid receive that video.</p>
+<h2>OBS and streaming programs</h2>
+<p>Models can stream from OBS with WHIP, which costs the server almost nothing, or with an RTMP stream key for programs that only send RTMP. Virtual cameras work like any webcam.</p>
+<h2>Our hosting</h2>
+<p>With our hosting, the website, database, media server, relay for strict networks, certificates, updates and nightly backups are all run for you.</p>
+<h2>Hosting it yourself</h2>
+<p>A Linux server with Apache, PHP 8.4 or newer and MySQL 8.0 or newer for the website, and a media server for the video. The full list of requirements is on fluffcams.com.</p>
+<p class="full"><a class="btn" href="https://fluffcams.com/requirements">Read the full tech specs</a></p>
+</main>
+<footer class="foot"><div class="wrap"><p>FluffCams is webcam platform software by FluffVision. <a href="https://fluffcams.com/">fluffcams.com</a> · <a href="https://fluffcams.com/demo">Live demo</a> · <a href="https://fluffcams.com/pricing">Pricing</a> · <a href="https://fluffcams.com/contact">Contact</a></p></div></footer>
+</body>
+</html>
